@@ -25,6 +25,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Comment');
     }
+    /**
+     * Establishes a 1-1 relationship with the OneToOneModel just for the demonstration purposes
+     */
+    public function oneToOneModel() {
+        return $this->belongsTo('App\OneToOneModel');
+    }
 
     /**
      * The attributes that are mass assignable.

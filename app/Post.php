@@ -21,4 +21,11 @@ class Post extends Model
     {
         return $this->hasMany('App\Comment');
     }
+
+    /**
+     * Establishes a Many-to-Many relationship with a ManyToManyModel just for the demonstration purposes
+     */
+    public function manyToManyModels() {
+        return $this->belongsToMany('App\ManyToManyModel');
+    }
 }
